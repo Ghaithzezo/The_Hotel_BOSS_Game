@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tilmap/Basic Tiles Only.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/—Pngtree—light effect photography light stage_7275697.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3, 1.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 10.4176 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 7.0
+height = 0.0
+
+[sub_resource type="SegmentShape2D" id=5]
+
+[node name="light" type="Node2D"]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2( 0, -10 )
+scale = Vector2( 0.5, 0.5 )
+node_a = NodePath("../1")
+node_b = NodePath("../2")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2( 0, 13.5 )
+scale = Vector2( 0.25, 0.25 )
+node_a = NodePath("../2")
+node_b = NodePath("../3")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2( 0, 25 )
+scale = Vector2( 0.5, 0.5 )
+node_a = NodePath("../3")
+node_b = NodePath("../4")
+
+[node name="1" type="StaticBody2D" parent="."]
+position = Vector2( 0, -8 )
+rotation = 3.14159
+
+[node name="Sprite" type="Sprite" parent="1"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 306.565, 156.996, 10.9235, 3.08429 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1"]
+scale = Vector2( 1.53102, 1.42181 )
+shape = SubResource( 3 )
+
+[node name="2" type="RigidBody2D" parent="."]
+position = Vector2( 0, 2 )
+
+[node name="Sprite" type="Sprite" parent="2"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 261.221, 144, 5.66544, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2"]
+position = Vector2( 2.23952e-09, -0.0148315 )
+rotation = -3.14159
+scale = Vector2( 0.204185, -0.76651 )
+shape = SubResource( 2 )
+
+[node name="3" type="RigidBody2D" parent="."]
+position = Vector2( 0, 17 )
+
+[node name="Sprite" type="Sprite" parent="3"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 144, 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3"]
+rotation = -3.14159
+scale = Vector2( 0.204185, -0.76651 )
+shape = SubResource( 2 )
+
+[node name="4" type="RigidBody2D" parent="."]
+position = Vector2( 0, 33 )
+
+[node name="Sprite" type="Sprite" parent="4"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 176, 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4"]
+position = Vector2( 0, -3 )
+scale = Vector2( 1.09177, 0.792873 )
+shape = SubResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="4"]
+position = Vector2( 0, 98.5234 )
+scale = Vector2( 0.0485209, 0.18792 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="4" groups=["light"]]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4/Area2D"]
+scale = Vector2( 1, 20 )
+shape = SubResource( 5 )

@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/light.png" type="Texture" id=2]
+[ext_resource path="res://Tilmap/Layers/Untitled27_20230216142357.png" type="Texture" id=3]
+[ext_resource path="res://Sound/keyboard-typing-5997.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Scripts/Hint_iec.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0.25098, 1, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+outline_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.9, 2.1, 2.2, 2.4, 2.5, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RichTextLabel2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RichTextLabel2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[node name="Hint_iec" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Untitled2720230216142357" type="Sprite" parent="."]
+position = Vector2( 512, 284.5 )
+scale = Vector2( 0.593279, 0.634171 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 140.0
+margin_top = 247.0
+margin_right = 793.0
+margin_bottom = 394.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Hint :
+This Boss is Made of Ice ,
+Use fire to defrost it ."
+visible_characters = 0
+percent_visible = 0.0
+text = "Hint :
+This Boss is Made of Ice ,
+Use fire to defrost it ."
+fit_content_height = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+modulate = Color( 0, 0.72549, 1, 0.498039 )
+margin_left = 914.0
+margin_top = 503.0
+margin_right = 1035.0
+margin_bottom = 602.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+Press:
+Enter"
+text = "
+Press:
+Enter"
+fit_content_height = true
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+position = Vector2( -318, 325 )
+scale = Vector2( 0.6, 0.8 )
+texture = ExtResource( 2 )
+offset = Vector2( 782, 164 )
+color = Color( 1, 0, 0, 1 )
+mode = 2
+
+[node name="Light2D3" type="Light2D" parent="Light2D"]
+position = Vector2( 75, -328.762 )
+scale = Vector2( 1.66667, 0.971875 )
+texture = ExtResource( 2 )
+offset = Vector2( 782, 164 )
+color = Color( 0.992157, 1, 0, 1 )
+mode = 2
+
+[node name="Light2D4" type="Light2D" parent="Light2D"]
+position = Vector2( 1260, 5 )
+texture = ExtResource( 2 )
+offset = Vector2( 782, 164 )
+color = Color( 1, 0, 0, 1 )
+mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

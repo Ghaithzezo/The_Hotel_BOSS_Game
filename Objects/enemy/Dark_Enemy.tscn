@@ -1,0 +1,358 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://Scripts/dark_enemy.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/enemydark/idle2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Creatures/heath.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Creatures/over.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Creatures/border.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/enemydark/death.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/enemydark/attacking.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/enemydark/face_gost.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/enemydark/summon.png" type="Texture" id=9]
+[ext_resource path="res://Sound/570858__rafaelzimrp__shadowboss_attack.wav" type="AudioStream" id=10]
+[ext_resource path="res://Objects/Kye_Dark.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Sound/semon.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sound/442769__qubodup__sword-hit.wav" type="AudioStream" id=13]
+
+[sub_resource type="RectangleShape2D" id=56]
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 58.3305, 6.28549 )
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 14.0
+height = 26.0
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 7 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 7 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 7 )
+region = Rect2( 400, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 7 )
+region = Rect2( 500, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 200, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 6 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 6 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 6 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 6 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 6 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 6 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 6 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 6 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 6 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 6 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 6 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 6 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 6 )
+region = Rect2( 400, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 6 )
+region = Rect2( 500, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 6 )
+region = Rect2( 600, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 6 )
+region = Rect2( 700, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 9 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 9 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 9 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 2 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 2 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 2 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 2 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=47]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
+"loop": false,
+"name": "death",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"loop": false,
+"name": "summon",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "Idile",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=48]
+radius = 45.5
+height = 0.0
+
+[sub_resource type="SegmentShape2D" id=49]
+a = Vector2( 16.5, -34 )
+b = Vector2( -2.5, 3 )
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 87.0
+height = 34.0
+
+[node name="Dark_Enemy" type="Node2D"]
+
+[node name="health_bar" type="TextureProgress" parent="."]
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = 133.0
+margin_right = -256.0
+margin_bottom = 139.0
+rect_scale = Vector2( 18, 2 )
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 3 )
+tint_progress = Color( 0.65098, 0.00392157, 0.00392157, 1 )
+
+[node name="dark_enemy" type="KinematicBody2D" parent="."]
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="hit_suond" type="AudioStreamPlayer2D" parent="dark_enemy"]
+scale = Vector2( 0.5, 0.5 )
+stream = ExtResource( 10 )
+pitch_scale = 1.01
+max_distance = 1000.0
+
+[node name="left" type="Area2D" parent="dark_enemy"]
+scale = Vector2( 0.6, 0.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy/left"]
+position = Vector2( -150, 0 )
+rotation = 1.5708
+scale = Vector2( 9.91421, 14.9382 )
+shape = SubResource( 56 )
+
+[node name="enemy_smller" type="Area2D" parent="dark_enemy"]
+position = Vector2( 142.5, 46.5 )
+scale = Vector2( 0.252999, -0.934425 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="dark_enemy/enemy_smller"]
+show_behind_parent = true
+position = Vector2( -1133.44, -0.802631 )
+scale = Vector2( 0.999999, 1.74518 )
+shape = SubResource( 55 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy/enemy_smller"]
+light_mask = 0
+position = Vector2( 1.97638, -1.07018 )
+scale = Vector2( 1, 1.32105 )
+shape = SubResource( 55 )
+
+[node name="summon_Timer" type="Timer" parent="dark_enemy"]
+wait_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy"]
+position = Vector2( -1, 1 )
+scale = Vector2( 1.03536, 0.819563 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="dark_enemy"]
+frames = SubResource( 47 )
+animation = "attack"
+frame = 3
+
+[node name="attack" type="Area2D" parent="dark_enemy"]
+scale = Vector2( 0.992647, 0.747273 )
+collision_layer = 0
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy/attack"]
+shape = SubResource( 48 )
+
+[node name="HIt" type="Area2D" parent="dark_enemy" groups=["swor"]]
+position = Vector2( -5.5, 7.5 )
+collision_layer = 0
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy/HIt"]
+position = Vector2( 28.5, 13.5 )
+z_index = 10
+shape = SubResource( 49 )
+
+[node name="zon" type="Area2D" parent="dark_enemy" groups=["body_dark"]]
+scale = Vector2( 0.20675, 0.246229 )
+collision_layer = 0
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_enemy/zon"]
+shape = SubResource( 7 )
+
+[node name="semon" type="AudioStreamPlayer2D" parent="dark_enemy"]
+stream = ExtResource( 12 )
+
+[node name="sword" type="AudioStreamPlayer2D" parent="dark_enemy"]
+stream = ExtResource( 13 )
+max_distance = 1000.0
+
+[node name="Death_Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="FaceGost" type="Sprite" parent="."]
+position = Vector2( -285, 135 )
+scale = Vector2( 2.525, 2.527 )
+texture = ExtResource( 8 )
+
+[node name="Kye_Dark" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[connection signal="death_boss_Gost" from="dark_enemy" to="Kye_Dark" method="_on_dark_enemy_death_boss_Gost"]
+[connection signal="body_entered" from="dark_enemy/left" to="dark_enemy" method="_on_left_body_entered"]
+[connection signal="body_exited" from="dark_enemy/left" to="dark_enemy" method="_on_left_body_exited"]
+[connection signal="body_entered" from="dark_enemy/enemy_smller" to="dark_enemy" method="_on_enemy_smller_body_entered"]
+[connection signal="timeout" from="dark_enemy/summon_Timer" to="dark_enemy" method="_on_summon_Timer_timeout"]
+[connection signal="body_entered" from="dark_enemy/attack" to="dark_enemy" method="_on_attack_body_entered"]
+[connection signal="body_exited" from="dark_enemy/attack" to="dark_enemy" method="_on_attack_body_exited"]
+[connection signal="area_entered" from="dark_enemy/zon" to="dark_enemy" method="_on_zon_area_entered"]
+[connection signal="timeout" from="Death_Timer" to="dark_enemy" method="_on_Death_Timer_timeout"]
+[connection signal="Key_taken" from="Kye_Dark" to="." method="_on_Kye_Dark_Key_taken"]

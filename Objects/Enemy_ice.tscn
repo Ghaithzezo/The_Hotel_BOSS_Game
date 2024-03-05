@@ -1,0 +1,290 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://Scripts/Enemy_ice.gd" type="Script" id=1]
+[ext_resource path="res://Sound/sword-swipes-7174.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sprites/enem_ice/death/death_2.png" type="Texture" id=3]
+[ext_resource path="res://Sound/bullet.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_6.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_7.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_8.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_10.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_9.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/enem_ice/death/death_13.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/enem_ice/death/death_11.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/enem_ice/death/death_14.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/enem_ice/death/death_9.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/enem_ice/death/death_7.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_6.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_7.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_9.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_2.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/enem_ice/death/death_15.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_3.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/enem_ice/death/death_1.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/enem_ice/walk/walk_4.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_13.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/enem_ice/death/death_8.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/enem_ice/death/death_10.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_8.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/enem_ice/death/death_16.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_12.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_14.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/enem_ice/death/death_4.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/enem_ice/death/death_5.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_10.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/enem_ice/death/death_3.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/enem_ice/death/death_6.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_11.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/enem_ice/death/death_12.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_2.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_3.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_1.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_4.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/enem_ice/1_atk/1_atk_5.png" type="Texture" id=54]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 20.326, 33.3506 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="Animation" id=12]
+resource_name = "Deth"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 20 ), ExtResource( 34 ), ExtResource( 19 ), ExtResource( 35 ), ExtResource( 16 ), ExtResource( 49 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 38 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "Hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0.368627, 0.368627, 1 ), Color( 1, 0.592157, 0.592157, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 52 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("..:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../hit_box:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "attack"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 52 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 33 ), ExtResource( 41 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "walk"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "warer"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="CapsuleShape2D" id=10]
+
+[node name="Enemy_ice" type="KinematicBody2D"]
+scale = Vector2( 0.7, 0.7 )
+collision_layer = 15
+collision_mask = 15
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.36239e-06, 9.99999 )
+scale = Vector2( 1.40566, 1.02804 )
+shape = SubResource( 8 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 1.5708
+enabled = true
+collision_mask = 128
+collide_with_areas = true
+
+[node name="player_detcotor" type="Area2D" parent="."]
+position = Vector2( -61, 10 )
+scale = Vector2( 3.06312, 2.06027 )
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detcotor"]
+shape = SubResource( 3 )
+
+[node name="attack" type="Area2D" parent="." groups=["ice"]]
+
+[node name="Sprite" type="Sprite" parent="attack"]
+texture = ExtResource( 52 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
+autoplay = "walk"
+anims/Deth = SubResource( 12 )
+anims/Hit = SubResource( 11 )
+anims/RESET = SubResource( 4 )
+anims/attack = SubResource( 5 )
+anims/walk = SubResource( 7 )
+anims/warer = SubResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack"]
+position = Vector2( -59, 7 )
+scale = Vector2( 3.38865, 0.955433 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="shoot_timer" type="Timer" parent="."]
+
+[node name="Rotater" type="Node2D" parent="."]
+
+[node name="Water" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="body" type="Area2D" parent="." groups=["body_ice"]]
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+position = Vector2( 9.53674e-07, 10 )
+scale = Vector2( 3.32858, 2.18193 )
+shape = SubResource( 10 )
+
+[node name="Deth" type="Timer" parent="."]
+wait_time = 1.4
+
+[node name="hit_box" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+pitch_scale = 0.92
+
+[node name="finsh_water" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="bullet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="body_entered" from="player_detcotor" to="." method="_on_player_detcotor_body_entered"]
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="Water" to="." method="_on_Water_timeout"]
+[connection signal="timeout" from="Deth" to="." method="_on_Deth_timeout"]
+[connection signal="timeout" from="finsh_water" to="." method="_on_finsh_water_timeout"]

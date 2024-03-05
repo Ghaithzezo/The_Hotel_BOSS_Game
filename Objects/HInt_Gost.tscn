@@ -1,0 +1,228 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/light.png" type="Texture" id=1]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Tilmap/Layers/IMG_20230215_131011.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/HInt_Gost.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+outline_size = 1
+outline_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 131, 261, 0, 0, 0, 0, 130, 344, 0, 0, 0, 0, 873, 338, 0, 0, 0, 0, 112, 370, 0, 0, 0, 0, 105, 340, 0, 0, 0, 0, 102, 411, 0, 0, 0, 0, 389, 412, 0, 0, 0, 0, 135, 262, 0, 0, 0, 0, 134, 260 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Path2D/PathFollow2D/Light2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8, 3.7, 4.3, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1024, 600 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RichTextLabel2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 4.8, 5.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Path2D/PathFollow2D/Light2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 600 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RichTextLabel2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Hint_Gost" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Img20230215131011" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.59848, 0.665188 )
+texture = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -15.0
+margin_right = 2.0
+margin_bottom = 585.0
+color = Color( 0, 0, 0, 0.34902 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 81.0
+margin_top = 248.0
+margin_right = 889.0
+margin_bottom = 446.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_text = "Hint :
+
+physical attacks don't work on the big Ghost boss,
+
+only light can kill it .
+"
+text = "Hint :
+
+physical attacks don't work on the big Ghost boss,
+
+only light can kill it .
+"
+fit_content_height = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 914.0
+margin_top = 503.0
+margin_right = 1035.0
+margin_bottom = 602.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+Press:
+Enter"
+text = "
+Press:
+Enter"
+fit_content_height = true
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( -21, -9 )
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 134, 260 )
+rotation = -2.24554
+offset = 2248.88
+
+[node name="Light2D" type="Light2D" parent="Path2D/PathFollow2D"]
+position = Vector2( 0.712097, -0.702057 )
+texture = ExtResource( 1 )
+texture_scale = 0.37
+color = Color( 0.862745, 0.886275, 0.164706, 1 )
+energy = 1.39
+mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+anims/RESET = SubResource( 4 )

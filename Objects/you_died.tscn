@@ -1,0 +1,210 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sound/you_died_.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sound/negative_beeps-6008.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/you_died.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-06.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-00.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-03.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-04.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-05.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-01.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/die1/adventurer-die-02.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.556863, 0, 0, 1 )
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color( 1, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+outline_size = 2
+outline_color = Color( 1, 0, 0, 1 )
+extra_spacing_top = 8
+extra_spacing_char = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+extra_spacing_top = 5
+extra_spacing_bottom = -7
+font_data = ExtResource( 1 )
+
+[sub_resource type="ShortCut" id=6]
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:custom_fonts/normal_font:extra_spacing_char")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -503, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("you_died:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("you_died2:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.2, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 0.9, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("you_died:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("you_died2:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 6 ) ]
+}
+
+[node name="you_died" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -300.0
+margin_right = 1024.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -250.0
+margin_top = 92.0
+margin_right = 306.0
+margin_bottom = 182.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "YOU DIED"
+text = "YOU DIED"
+scroll_active = false
+
+[node name="Restart" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = 47.0
+margin_right = 162.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 5 )
+shortcut = SubResource( 6 )
+text = "Play Again"
+
+[node name="Back_to_Main_Menu" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -322.0
+margin_top = 153.0
+margin_right = 322.0
+margin_bottom = 223.0
+custom_fonts/font = SubResource( 5 )
+shortcut = SubResource( 6 )
+text = "Back To Main Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="you_died" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+pitch_scale = 0.9
+
+[node name="you_died2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 0.4
+max_distance = 900.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 496, 273 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 6 )
+
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Back_to_Main_Menu" to="." method="_on_Back_to_Main_Menu_pressed"]

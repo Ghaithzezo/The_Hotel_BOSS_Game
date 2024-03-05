@@ -1,0 +1,190 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/start_main.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/BloodOverlay.png" type="Texture" id=3]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Tilmap/Layers/Untitled28_20230217091939.png" type="Texture" id=5]
+[ext_resource path="res://Tilmap/House-kitchen-Sheet.png" type="Texture" id=6]
+[ext_resource path="res://Sound/tv-background-intro-14030.mp3" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.5039, 12.1667 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.5, 10 )
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0.47451, 0.168627, 0.168627, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 49.5, 19.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 30, 10 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.329412, 0.156863, 0.160784, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="start_main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Untitled2820230217091939" type="Sprite" parent="."]
+position = Vector2( 245.5, 166 )
+scale = Vector2( 0.399231, 0.431877 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( 33, 56 )
+scale = Vector2( 1.4416, 0.479999 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2( 0, 0.333351 )
+shape = SubResource( 1 )
+
+[node name="House-kitchen-Sheet" type="Sprite" parent="."]
+position = Vector2( 33, 56 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 96, 109, 32, 6 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 31, 19 )
+
+[node name="start" type="Area2D" parent="."]
+position = Vector2( 107, 108 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="start"]
+position = Vector2( -1.5, 0 )
+shape = SubResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="start"]
+margin_left = -26.0
+margin_top = -23.0
+margin_right = 38.0
+margin_bottom = 17.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+SART"
+text = "
+SART"
+
+[node name="About Developer" type="Area2D" parent="."]
+position = Vector2( 193, 180 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="About Developer"]
+position = Vector2( 19.5, 9.5 )
+shape = SubResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="About Developer"]
+margin_left = -26.0
+margin_top = -23.0
+margin_right = 72.0
+margin_bottom = 56.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+About Developer"
+text = "
+About Developer"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 244, 140 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Reload" type="Area2D" parent="."]
+position = Vector2( 215, 334 )
+scale = Vector2( 1.98504, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reload"]
+scale = Vector2( 84.4481, 1 )
+shape = SubResource( 4 )
+
+[node name="BloodOverlay" type="Sprite" parent="."]
+position = Vector2( 1584, -383 )
+texture = ExtResource( 3 )
+
+[node name="Quit" type="Area2D" parent="."]
+position = Vector2( 374, 235 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quit"]
+position = Vector2( -8, -3 )
+shape = SubResource( 5 )
+
+[node name="Quit" type="RichTextLabel" parent="Quit"]
+margin_left = -26.0
+margin_top = -25.0
+margin_right = 26.0
+margin_bottom = 15.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[wave]
+Quit"
+text = "
+Quit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 133.0
+margin_top = 4.0
+margin_right = 466.0
+margin_bottom = 44.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "
+ HOTEL: BOSS HUNT"
+text = "
+ HOTEL: BOSS HUNT"
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 76.0
+margin_top = 96.0
+margin_right = 137.0
+margin_bottom = 121.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Panel" type="Panel" parent="Panel"]
+margin_left = 84.0
+margin_top = 73.0
+margin_right = 189.0
+margin_bottom = 115.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Panel2" type="Panel" parent="Panel"]
+margin_left = 259.0
+margin_top = 123.0
+margin_right = 322.0
+margin_bottom = 150.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[connection signal="body_entered" from="start" to="." method="_on_start_body_entered"]
+[connection signal="body_entered" from="About Developer" to="." method="_on_About_Developer_body_entered"]
+[connection signal="body_entered" from="Reload" to="." method="_on_Reload_body_entered"]
+[connection signal="body_entered" from="Quit" to="." method="_on_Quit_body_entered"]
