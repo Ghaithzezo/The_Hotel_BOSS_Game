@@ -1,0 +1,349 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://Sound/stairs.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/main.gd" type="Script" id=2]
+[ext_resource path="res://Tilmap/Prefabs.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/enemydark/attacking.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_6.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/enem_ice/take_hit/take_hit_7.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_6.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Enemy_Fier/01_demon_idle/demon_idle_3.png" type="Texture" id=17]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://Sound/stairs-5.mp3" type="AudioStream" id=19]
+[ext_resource path="res://Sound/intro-music-black-box-enlightenment-12384.mp3" type="AudioStream" id=20]
+
+[sub_resource type="TileSet" id=3]
+0/name = "Prefabs.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 112, 288, 144, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Prefabs.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 80, 160, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Prefabs.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 176, 64, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Prefabs.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 64, 288, 144, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 216, 720, 0, 0, 0, 0, 216, 459, -167.109, 78.0567, 167.109, -78.0567, 215, 331, 55.6186, 23.947, -55.6186, -23.947, 216, 139, -132.71, 16.4736, 132.71, -16.4736, 215, -25, 94.5652, -1.85374, -94.5652, 1.85374, 215, -198, 33.9965, 188.742, -33.9965, -188.742, 215, -520 )
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Name_game"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/ColorRect2:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 307 ), Vector2( 211, 307 ), Vector2( 374, 307 ), Vector2( 520, 307 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0.996078, 0.996078, 0.996078, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("3:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "New Anim"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("3:autoplay")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("3:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 4 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
+region = Rect2( 400, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 4 )
+region = Rect2( 500, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 200, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=23]
+size = 28
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 4
+font_data = ExtResource( 18 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Timer2" type="Timer" parent="."]
+process_mode = 0
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 564 )
+tile_set = SubResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -5046264, 0, 0, -4980727, 1, 0, -4849656, 0, 0, -4653048, 0, 0, -4587505, 1, 0, -4456440, 0, 0, -4259832, 0, 0, -4194295, 1, 0, -4063224, 0, 0, -3866616, 0, 0, -3801079, 1, 0, -3801073, 1, 0, -3670008, 0, 0, -3473400, 0, 0, -3407863, 1, 0, -3407860, 1, 0, -3407857, 1, 0, -3276792, 0, 0, -3080184, 0, 0, -2883576, 0, 0, -2818039, 1, 0, -2818036, 1, 0, -2818033, 1, 0, -2686968, 0, 0, -2490360, 0, 0, -2424823, 1, 0, -2424820, 1, 0, -2424817, 1, 0, -2293752, 0, 0, -2097144, 0, 0, -1900536, 0, 0, -1834999, 1, 0, -1834996, 1, 0, -1834993, 1, 0, -1703928, 0, 0, -1507320, 0, 0, -1441783, 1, 0, -1441780, 1, 0, -1441777, 1, 0, -1310712, 0, 0, -1114104, 0, 0, -917496, 0, 0, -720888, 0, 0, -524280, 3, 0 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 992.0
+margin_top = -329.0
+margin_right = 992.0
+margin_bottom = -329.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+margin_left = -943.0
+margin_top = 1065.0
+margin_right = -943.0
+margin_bottom = 1372.0
+rect_scale = Vector2( 0.553346, 0.101534 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( -15, 24 )
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 216, 720 )
+rotation = -1.57079
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Name_game"
+anims/Name_game = SubResource( 24 )
+"anims/New Anim" = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 68, 267 )
+frames = SubResource( 20 )
+frame = 8
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="AnimatedSprite"]
+position = Vector2( 276, -405 )
+frames = SubResource( 21 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="AnimatedSprite"]
+position = Vector2( 5, -775 )
+frames = SubResource( 22 )
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 57.9996
+margin_top = 736.0
+margin_right = 345.0
+margin_bottom = 770.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 23 )
+text = "HOTEL: BOSS HUNT"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[node name="1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 19 )
+volume_db = 15.0
+max_distance = 4000.0
+
+[node name="2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = 7.429
+max_distance = 4000.0
+
+[node name="3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
+
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
