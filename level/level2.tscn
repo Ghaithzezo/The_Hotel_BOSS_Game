@@ -1,0 +1,551 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Tilmap/Terrain (16x16).png" type="Texture" id=1]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Enemy_ice.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tilmap/House-kitchen-Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Tilmap/Basic Tiles Only.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Creatures/heath.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Creatures/border.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Creatures/over.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/enem_ice/ice.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/BloodOverlay.png" type="Texture" id=10]
+[ext_resource path="res://Sound/fier1.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sound/boss-sp-303-drum-rhythm-200-bpm-8437.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Sprites/33ice.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/level2.gd" type="Script" id=14]
+[ext_resource path="res://Sound/correct-choice-43861.mp3" type="AudioStream" id=15]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Terrain (16x16).png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 64, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Terrain (16x16).png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 64, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Terrain (16x16).png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 64, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Terrain (16x16).png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 80, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Terrain (16x16).png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 96, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Terrain (16x16).png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 16, 96, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Terrain (16x16).png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 96, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Terrain (16x16).png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 80, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Terrain (16x16).png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 16, 80, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="TileSet" id=3]
+0/name = "House-kitchen-Sheet.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 96, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "House-kitchen-Sheet.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 96, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "House-kitchen-Sheet.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 96, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "House-kitchen-Sheet.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 128, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "House-kitchen-Sheet.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 96, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "House-kitchen-Sheet.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 128, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 40 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 40 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 40 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 40 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "gas",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 4.5, 9 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 256.5, 3 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 9, 3 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 10.5, 6 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 15.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 5.5, 18 )
+
+[sub_resource type="Curve" id=22]
+min_value = -1024.0
+max_value = 1024.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, -175.909 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=23]
+offsets = PoolRealArray( 0, 0.543103, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.21582, 0, 1, 1, 1, 1, 1, 1 )
+
+[node name="level2" type="Node2D"]
+script = ExtResource( 14 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -393232, 0, 0, -393231, 1, 0, -393230, 1, 0, -393229, 1, 0, -393228, 1, 0, -393227, 1, 0, -393226, 1, 0, -393225, 1, 0, -393224, 1, 0, -393223, 1, 0, -393222, 1, 0, -393221, 1, 0, -393220, 1, 0, -393219, 1, 0, -393218, 1, 0, -393217, 1, 0, -458752, 1, 0, -458751, 1, 0, -458750, 1, 0, -458749, 1, 0, -458748, 1, 0, -458747, 1, 0, -458746, 1, 0, -458745, 1, 0, -458744, 1, 0, -458743, 1, 0, -458742, 1, 0, -458741, 1, 0, -458740, 1, 0, -458739, 1, 0, -458738, 1, 0, -458737, 2, 0, -327696, 7, 0, -327695, 8, 0, -327694, 8, 0, -327693, 8, 0, -327692, 8, 0, -327691, 8, 0, -327690, 8, 0, -327689, 8, 0, -327688, 8, 0, -327687, 8, 0, -327686, 8, 0, -327685, 8, 0, -327684, 8, 0, -327683, 8, 0, -327682, 8, 0, -327681, 8, 0, -393216, 8, 0, -393215, 8, 0, -393214, 8, 0, -393213, 8, 0, -393212, 8, 0, -393211, 8, 0, -393210, 8, 0, -393209, 8, 0, -393208, 8, 0, -393207, 8, 0, -393206, 8, 0, -393205, 8, 0, -393204, 8, 0, -393203, 8, 0, -393202, 8, 0, -393201, 3, 0, -262160, 7, 0, -262159, 8, 0, -262158, 8, 0, -262157, 8, 0, -262156, 8, 0, -262155, 8, 0, -262154, 8, 0, -262153, 8, 0, -262152, 8, 0, -262151, 8, 0, -262150, 8, 0, -262149, 8, 0, -262148, 8, 0, -262147, 8, 0, -262146, 8, 0, -262145, 8, 0, -327680, 8, 0, -327679, 8, 0, -327678, 8, 0, -327677, 8, 0, -327676, 8, 0, -327675, 8, 0, -327674, 8, 0, -327673, 8, 0, -327672, 8, 0, -327671, 8, 0, -327670, 8, 0, -327669, 8, 0, -327668, 8, 0, -327667, 8, 0, -327666, 8, 0, -327665, 3, 0, -196624, 7, 0, -196623, 8, 0, -196622, 8, 0, -196621, 8, 0, -196620, 8, 0, -196619, 8, 0, -196618, 8, 0, -196617, 8, 0, -196616, 8, 0, -196615, 8, 0, -196614, 8, 0, -196613, 8, 0, -196612, 8, 0, -196611, 8, 0, -196610, 8, 0, -196609, 8, 0, -262144, 8, 0, -262143, 8, 0, -262142, 8, 0, -262141, 8, 0, -262140, 8, 0, -262139, 8, 0, -262138, 8, 0, -262137, 8, 0, -262136, 8, 0, -262135, 8, 0, -262134, 8, 0, -262133, 8, 0, -262132, 8, 0, -262131, 8, 0, -262130, 8, 0, -262129, 3, 0, -131088, 7, 0, -131087, 8, 0, -131086, 8, 0, -131085, 8, 0, -131084, 8, 0, -131083, 8, 0, -131082, 8, 0, -131081, 8, 0, -131080, 8, 0, -131079, 8, 0, -131078, 8, 0, -131077, 8, 0, -131076, 8, 0, -131075, 8, 0, -131074, 8, 0, -131073, 8, 0, -196608, 8, 0, -196607, 8, 0, -196606, 8, 0, -196605, 8, 0, -196604, 8, 0, -196603, 8, 0, -196602, 8, 0, -196601, 8, 0, -196600, 8, 0, -196599, 8, 0, -196598, 8, 0, -196597, 8, 0, -196596, 8, 0, -196595, 8, 0, -196594, 8, 0, -196593, 3, 0, -65552, 7, 0, -65551, 8, 0, -65550, 8, 0, -65549, 8, 0, -65548, 8, 0, -65547, 8, 0, -65546, 8, 0, -65545, 8, 0, -65544, 8, 0, -65543, 8, 0, -65542, 8, 0, -65541, 8, 0, -65540, 8, 0, -65539, 8, 0, -65538, 8, 0, -65537, 8, 0, -131072, 8, 0, -131071, 8, 0, -131070, 8, 0, -131069, 8, 0, -131068, 8, 0, -131067, 8, 0, -131066, 8, 0, -131065, 8, 0, -131064, 8, 0, -131063, 8, 0, -131062, 8, 0, -131061, 8, 0, -131060, 8, 0, -131059, 8, 0, -131058, 8, 0, -131057, 3, 0, -16, 7, 0, -15, 8, 0, -14, 8, 0, -13, 8, 0, -12, 8, 0, -11, 8, 0, -10, 8, 0, -9, 8, 0, -8, 8, 0, -7, 8, 0, -6, 8, 0, -5, 8, 0, -4, 8, 0, -3, 8, 0, -2, 8, 0, -1, 8, 0, -65536, 8, 0, -65535, 8, 0, -65534, 8, 0, -65533, 8, 0, -65532, 8, 0, -65531, 8, 0, -65530, 8, 0, -65529, 8, 0, -65528, 8, 0, -65527, 8, 0, -65526, 8, 0, -65525, 8, 0, -65524, 8, 0, -65523, 8, 0, -65522, 8, 0, -65521, 3, 0, 65520, 7, 0, 65521, 8, 0, 65522, 8, 0, 65523, 8, 0, 65524, 8, 0, 65525, 8, 0, 65526, 8, 0, 65527, 8, 0, 65528, 8, 0, 65529, 8, 0, 65530, 8, 0, 65531, 8, 0, 65532, 8, 0, 65533, 8, 0, 65534, 8, 0, 65535, 8, 0, 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 3, 0, 131056, 7, 0, 131057, 8, 0, 131058, 8, 0, 131059, 8, 0, 131060, 8, 0, 131061, 8, 0, 131062, 8, 0, 131063, 8, 0, 131064, 8, 0, 131065, 8, 0, 131066, 8, 0, 131067, 8, 0, 131068, 8, 0, 131069, 8, 0, 131070, 8, 0, 131071, 8, 0, 65536, 8, 0, 65537, 8, 0, 65538, 8, 0, 65539, 8, 0, 65540, 8, 0, 65541, 8, 0, 65542, 8, 0, 65543, 8, 0, 65544, 8, 0, 65545, 8, 0, 65546, 8, 0, 65547, 8, 0, 65548, 8, 0, 65549, 8, 0, 65550, 8, 0, 65551, 3, 0, 196592, 7, 0, 196593, 8, 0, 196594, 8, 0, 196595, 8, 0, 196596, 8, 0, 196597, 8, 0, 196598, 8, 0, 196599, 8, 0, 196600, 8, 0, 196601, 8, 0, 196602, 8, 0, 196603, 8, 0, 196604, 8, 0, 196605, 8, 0, 196606, 8, 0, 196607, 8, 0, 131072, 8, 0, 131073, 8, 0, 131074, 8, 0, 131075, 8, 0, 131076, 8, 0, 131077, 8, 0, 131078, 8, 0, 131079, 8, 0, 131080, 8, 0, 131081, 8, 0, 131082, 8, 0, 131083, 8, 0, 131084, 8, 0, 131085, 8, 0, 131086, 8, 0, 131087, 3, 0, 262128, 7, 0, 262129, 8, 0, 262130, 8, 0, 262131, 8, 0, 262132, 8, 0, 262133, 8, 0, 262134, 8, 0, 262135, 8, 0, 262136, 8, 0, 262137, 8, 0, 262138, 8, 0, 262139, 8, 0, 262140, 8, 0, 262141, 8, 0, 262142, 8, 0, 262143, 8, 0, 196608, 8, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 8, 0, 196613, 8, 0, 196614, 8, 0, 196615, 8, 0, 196616, 8, 0, 196617, 8, 0, 196618, 8, 0, 196619, 8, 0, 196620, 8, 0, 196621, 8, 0, 196622, 8, 0, 196623, 3, 0, 327664, 7, 0, 327665, 8, 0, 327666, 8, 0, 327667, 8, 0, 327668, 8, 0, 327669, 8, 0, 327670, 8, 0, 327671, 8, 0, 327672, 8, 0, 327673, 8, 0, 327674, 8, 0, 327675, 8, 0, 327676, 8, 0, 327677, 8, 0, 327678, 8, 0, 327679, 8, 0, 262144, 8, 0, 262145, 8, 0, 262146, 8, 0, 262147, 8, 0, 262148, 8, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 8, 0, 262153, 8, 0, 262154, 8, 0, 262155, 8, 0, 262156, 8, 0, 262157, 8, 0, 262158, 8, 0, 262159, 3, 0, 393200, 6, 0, 393201, 5, 0, 393202, 5, 0, 393203, 5, 0, 393204, 5, 0, 393205, 5, 0, 393206, 5, 0, 393207, 5, 0, 393208, 5, 0, 393209, 5, 0, 393210, 5, 0, 393211, 5, 0, 393212, 5, 0, 393213, 5, 0, 393214, 5, 0, 393215, 5, 0, 327680, 5, 0, 327681, 5, 0, 327682, 5, 0, 327683, 5, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 4, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -196623, 3, 0, -196620, 0, 0, -196616, 1, 0, -262139, 5, 0, -262135, 1, 0, -262131, 5, 0, -131076, 3, 0, -131073, 2, 0, -196606, 0, 0, -65537, 1, 0, 65543, 7, 0, 65544, 7, 0, 65545, 7, 0, 65546, 7, 0, 65547, 7, 0, 65548, 7, 0, 65549, 7, 0, 65550, 7, 0, 196593, 8, 0, 196594, 8, 0, 196595, 8, 0, 196596, 8, 0, 196597, 8, 0, 131072, 8, 0, 131078, 8, 0, 131079, 8, 0, 131080, 8, 0, 131081, 8, 0, 131082, 8, 0, 131083, 8, 0, 131084, 8, 0, 131085, 8, 0, 131086, 8, 0, 262129, 7, 0, 262130, 7, 0, 262131, 7, 0, 262133, 7, 0, 262134, 7, 0, 262135, 7, 0, 262136, 7, 0, 262137, 7, 0, 262138, 7, 0, 262139, 7, 0, 196609, 7, 0, 196614, 7, 0, 196615, 7, 0, 196616, 7, 0, 196617, 7, 0, 196618, 7, 0, 196619, 7, 0, 196620, 7, 0, 196621, 7, 0, 196622, 7, 0, 327665, 6, 0, 327666, 6, 0, 327667, 6, 0, 327668, 6, 0, 327669, 6, 0, 327670, 6, 0, 327671, 6, 0, 327672, 6, 0, 327673, 6, 0, 327674, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0, 262155, 6, 0, 262156, 6, 0, 262157, 6, 0, 262158, 6, 0 )
+
+[node name="Door" type="Sprite" parent="."]
+modulate = Color( 0, 0.811765, 1, 1 )
+position = Vector2( 117, 64 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 32, 688, 32, 48 )
+
+[node name="Gas5" type="AnimatedSprite" parent="."]
+position = Vector2( -343, 32 )
+frames = SubResource( 8 )
+animation = "gas"
+offset = Vector2( 156, 41 )
+
+[node name="Gas2" type="AnimatedSprite" parent="."]
+position = Vector2( 44, 32 )
+frames = SubResource( 8 )
+animation = "gas"
+offset = Vector2( 156, 41 )
+
+[node name="icebox" type="AnimatedSprite" parent="Gas2"]
+position = Vector2( -373, -63 )
+frames = SubResource( 8 )
+frame = 1
+playing = true
+offset = Vector2( 219, 108 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Gas2"]
+position = Vector2( -44, 41 )
+frames = SubResource( 8 )
+animation = "New Anim"
+frame = 3
+
+[node name="Gas4" type="Area2D" parent="Gas2"]
+position = Vector2( -231, 45 )
+collision_layer = 0
+collision_mask = 17
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas2/Gas4"]
+shape = SubResource( 18 )
+
+[node name="Gas3" type="Area2D" parent="Gas2"]
+position = Vector2( 156, 45 )
+collision_layer = 0
+collision_mask = 17
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gas2/Gas3"]
+shape = SubResource( 18 )
+
+[node name="dwon" type="StaticBody2D" parent="."]
+position = Vector2( 0, 115 )
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dwon"]
+position = Vector2( 0, -24 )
+shape = SubResource( 2 )
+
+[node name="top" type="StaticBody2D" parent="dwon"]
+position = Vector2( 0, -215 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dwon/top"]
+position = Vector2( 0.5, -7 )
+shape = SubResource( 2 )
+
+[node name="Right" type="StaticBody2D" parent="dwon"]
+position = Vector2( 244, -115 )
+rotation = 1.5708
+scale = Vector2( 0.417, 1 )
+collision_layer = 131
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dwon/Right"]
+position = Vector2( 0.5, -7 )
+shape = SubResource( 2 )
+
+[node name="left" type="StaticBody2D" parent="dwon"]
+position = Vector2( -244, -114 )
+rotation = -1.5708
+scale = Vector2( 0.417, 1 )
+collision_layer = 159
+collision_mask = 129
+constant_angular_velocity = -0.005
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dwon/left"]
+position = Vector2( 0.5, -7 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.4 )
+
+[node name="kye" type="Area2D" parent="."]
+position = Vector2( 88, -12 )
+
+[node name="33Ice" type="Sprite" parent="kye"]
+position = Vector2( -201, -46 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kye"]
+position = Vector2( -200, -42 )
+shape = SubResource( 20 )
+
+[node name="Enemy_ice" parent="." instance=ExtResource( 3 )]
+collision_mask = 31
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -112, 27 )
+
+[node name="TextureProgress2" type="TextureProgress" parent="."]
+margin_left = -153.0
+margin_top = 98.0
+margin_right = -121.0
+margin_bottom = 104.0
+rect_scale = Vector2( 10, 3 )
+value = 100.0
+texture_under = ExtResource( 8 )
+texture_over = ExtResource( 7 )
+texture_progress = ExtResource( 6 )
+tint_progress = Color( 0, 0.814516, 1, 1 )
+
+[node name="Ice" type="Sprite" parent="TextureProgress2"]
+position = Vector2( -0.576001, 4 )
+scale = Vector2( 0.1195, 0.462833 )
+texture = ExtResource( 9 )
+
+[node name="fier" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fier"]
+position = Vector2( 0.5, -26 )
+shape = SubResource( 17 )
+
+[node name="fibesh_gas" type="Timer" parent="."]
+wait_time = 1.7
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="BloodOverlay" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.392157 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0.500025, 5 )
+scale = Vector2( 0.414844, 0.3225 )
+texture = ExtResource( 10 )
+
+[node name="icebox" type="Area2D" parent="."]
+position = Vector2( -115, 75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="icebox"]
+shape = SubResource( 19 )
+
+[node name="fier2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = 20.0
+max_distance = 6000.0
+
+[node name="word" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+max_distance = 1000.0
+
+[node name="door" type="Area2D" parent="."]
+position = Vector2( 117, 62 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2( -0.5, 8 )
+shape = SubResource( 21 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="door"]
+position = Vector2( -13, 26 )
+rotation = 0.174641
+gravity = Vector2( 0, -90 )
+tangential_accel_random = 1.0
+tangential_accel_curve = SubResource( 22 )
+angle = 58.4
+angle_random = 1.0
+scale_amount_random = 1.0
+color_ramp = SubResource( 23 )
+hue_variation = -1.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="door"]
+position = Vector2( 13, 26 )
+rotation = 0.174641
+gravity = Vector2( 0, -90 )
+tangential_accel_random = 1.0
+tangential_accel_curve = SubResource( 22 )
+angle = 58.4
+angle_random = 1.0
+scale_amount_random = 1.0
+color_ramp = SubResource( 23 )
+hue_variation = -1.0
+
+[node name="kye_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
+
+[connection signal="area_entered" from="Gas2/Gas4" to="Enemy_ice" method="_on_Gas3_area_entered"]
+[connection signal="area_entered" from="Gas2/Gas3" to="Enemy_ice" method="_on_Gas3_area_entered"]
+[connection signal="body_entered" from="kye" to="." method="_on_kye_body_entered"]
+[connection signal="damig" from="Enemy_ice" to="Player" method="_on_Enemy_ice_damig"]
+[connection signal="death" from="Enemy_ice" to="." method="_on_Enemy_ice_death"]
+[connection signal="heath_updated" from="Player" to="Enemy_ice" method="_on_Player_heath_updated"]
+[connection signal="area_entered" from="fier" to="Enemy_ice" method="_on_fier_area_entered"]
+[connection signal="timeout" from="fibesh_gas" to="Enemy_ice" method="_on_fibesh_gas_timeout"]
+[connection signal="timeout" from="Timer" to="Enemy_ice" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="icebox" to="Enemy_ice" method="_on_icebox_body_entered"]
+[connection signal="body_exited" from="icebox" to="Enemy_ice" method="_on_icebox_body_exited"]
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
