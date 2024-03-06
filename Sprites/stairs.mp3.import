@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/stairs.mp3-8529e894fde81fe65ddf76e192a860bd.mp3str"
+
+[deps]
+
+source_file="res://Sprites/stairs.mp3"
+dest_files=[ "res://.import/stairs.mp3-8529e894fde81fe65ddf76e192a860bd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
